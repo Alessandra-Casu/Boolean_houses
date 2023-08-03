@@ -11,11 +11,23 @@
     
         {{-- <img src="{{ Vite::asset('resources/img/picsum30.jpg') }}" alt="" /> --}}
        
-
-        <ul>
+    <div class="container">
+        <div class="row g-3 row-cols-3">
             @foreach ($houses as $house)
-            <li>{{ $house->address }}, Stanze: {{ $house->rooms }}</li>
+                <div class="col">
+                    <div class="card h-100">
+                        {{-- <img src="..." class="card-img-top" alt="..."> --}}
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $house->address }}</h5>
+                                <h6 class="card-text"> Stanze: {{ $house->rooms }}</h6>
+                                <p class="card-text">{{ $house->description }}</p>
+                                {{-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+                            </div>
+                    </div>
+                </div>
             @endforeach
-        </ul>
+        </div>
+    </div>
+      
     </body>
 </html>
