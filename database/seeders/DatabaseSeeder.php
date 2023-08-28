@@ -23,6 +23,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             HousesTableSeeder::class,
+            
+            AgentsTableSeeder::class,
         ]);
     }
 }
